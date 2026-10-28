@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUBTRACK — know what you pay, before you pay it</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <meta name="theme-color" content="#d0ccc7" />
+  <script>
+    /* Apply the saved/system theme before first paint so there is no light flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js-motion");
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute("content", t === "dark" ? "#000000" : "#d0ccc7");
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="description" content="Track every subscription, get renewal reminders by email, and see where your money goes." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- =====================================================================
+       PUBLIC SITE (landing page + login/sign-up). Hidden automatically
+       once the user is signed in (see landing.css).
+       ===================================================================== -->
+  <div id="publicSite">
+
+    <!-- ------------------------------ Nav ------------------------------ -->
+    <header class="lp-nav">
+      <a class="lp-brand" href="#top" aria-label="SUBTRACK home">
+        <span class="brand-logo" role="img" aria-label="SUBTRACK"></span>
+      </a>
+      <nav class="lp-nav-links" aria-label="Page sections">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="lp-nav-actions">
+        <button id="landingThemeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></svg>
+        </button>
+        <button type="button" class="lp-btn lp-btn-ghost" data-open-auth="login">Log in</button>
+        <button type="button" class="lp-btn lp-btn-solid" data-open-auth="signup">Get started</button>
+      </div>
+    </header>
+
+    <!-- ------------------------------ Hero + auth ------------------------------ -->
+    <section class="lp-hero" id="top">
+      <div class="lp-hero-copy">
+        <span class="lp-pill"><span class="lp-dot"></span> Free · private · no card needed</span>
+        <h1>Know what you pay,<br /><span class="lp-accent">before you pay it.</span></h1>
+        <p class="lp-lead">
+          One calm dashboard for every subscription. See monthly and yearly spend,
+          catch renewals early, and get an email before a charge surprises you.
+        </p>
+        <div class="lp-hero-cta">
+          <button type="button" class="lp-btn lp-btn-solid lp-btn-lg" data-open-auth="signup">Create free account</button>
+          <a class="lp-btn lp-btn-ghost lp-btn-lg" href="#features">See how it works</a>
+        </div>
+        <ul class="lp-trust">
+          <li><i data-lucide="shield-check"></i> Data stays in your browser</li>
+          <li><i data-lucide="mail-check"></i> Email-verified accounts</li>
+          <li><i data-lucide="zap"></i> Set up in a minute</li>
+        </ul>
+      </div>
+
+      <!-- ============================= AUTH SCREEN (existing card) ============================= -->
+      <div id="authScreen" class="auth-screen hidden">
+        <div class="auth-card card">
+          <div class="brand auth-brand">
+        <span class="brand-logo" role="img" aria-label="SUBTRACK"></span>
+      </div>
+
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab active" id="loginTabBtn">Log in</button>
+            <button type="button" class="auth-tab" id="signupTabBtn">Sign up</button>
+          </div>
+
+          <!-- ------------------------- Login form ------------------------- -->
+          <form id="loginForm" class="auth-form">
+            <div class="form-row">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" placeholder="you@example.com" required autocomplete="username" />
+            </div>
+            <div class="form-row">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" placeholder="••••••••" required autocomplete="current-password" />
+            </div>
+            <p id="loginError" class="auth-error hidden"></p>
+            <button type="submit" class="btn btn-primary auth-submit">Log in</button>
+          </form>
+
+          <!-- ------------------------- Sign up form ------------------------- -->
+          <form id="signupForm" class="auth-form hidden">
+            <div class="form-row">
+              <label for="signupName">Name</label>
+              <input type="text" id="signupName" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <label for="signupEmail">Email</label>
+              <input type="email" id="signupEmail" placeholder="you@example.com" required autocomplete="username" />
+            </div>
+            <div class="form-row">
+              <label for="signupPassword">Password</label>
+              <input type="password" id="signupPassword" placeholder="At least 6 characters" required minlength="6" autocomplete="new-password" />
+            </div>
+            <p id="signupError" class="auth-error hidden"></p>
+            <button type="submit" class="btn btn-primary auth-submit">Create account</button>
+          </form>
+
+          <!-- (the email-code step is added here by file.js) -->
+
+          <p class="auth-note">Accounts and subscription data are stored in this browser.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------ Stats strip ------------------------------ -->
+    <section class="lp-strip" aria-label="Highlights">
+      <div class="lp-strip-item lp-reveal"><strong>3 days</strong><span>early renewal email</span></div>
+      <div class="lp-strip-item lp-reveal"><strong>0</strong><span>servers, your data is yours</span></div>
+      <div class="lp-strip-item lp-reveal"><strong>1 paste</strong><span>to add from a bank SMS</span></div>
+      <div class="lp-strip-item lp-reveal"><strong>Light &amp; dark</strong><span>easy on the eyes</span></div>
+    </section>
+
+    <!-- ------------------------------ Showcase (illustrations) ------------------------------ -->
+    <section class="lp-section" id="showcase">
+      <div class="lp-section-head lp-reveal">
+        <span class="lp-eyebrow">See it in action</span>
+        <h2>Your subscriptions, finally in one place.</h2>
+        <p>From a bank SMS to a renewal reminder, everything is a glance away.</p>
+      </div>
+
+      <div class="lp-show-row lp-reveal" data-reveal="left">
+        <div class="lp-show-copy">
+          <span class="lp-eyebrow">Dashboard</span>
+          <h3>See every charge, total and trend.</h3>
+          <p>Monthly and yearly spend, what is active, and where the money goes, all on a single calm screen.</p>
+          <ul><li>Live monthly and yearly totals</li><li>Spend broken down by category</li><li>Search, filter and sort in a click</li></ul>
+        </div>
+        <figure class="lp-show-art"><svg viewBox="0 0 520 340" role="img" aria-label="Subscription dashboard showing monthly spend, a list of subscriptions and a spending chart">
+  <rect class="il-card" x="10" y="10" width="500" height="320" rx="18"/>
+  <circle class="il-line" cx="34" cy="34" r="5"/><circle class="il-line" cx="52" cy="34" r="5"/><circle class="il-line" cx="70" cy="34" r="5"/>
+  <g class="a-pop" style="--i:0"><rect class="il-card2" x="28" y="56" width="148" height="64" rx="12"/><text class="il-text-s" x="42" y="78">Monthly spend</text><text class="il-text" x="42" y="104" style="font-size:20px">$48.97</text></g>
+  <g class="a-pop" style="--i:1"><rect class="il-card2" x="186" y="56" width="148" height="64" rx="12"/><text class="il-text-s" x="200" y="78">Yearly spend</text><text class="il-text" x="200" y="104" style="font-size:20px">$587.64</text></g>
+  <g class="a-pop" style="--i:2"><rect class="il-card2" x="344" y="56" width="148" height="64" rx="12"/><text class="il-text-s" x="358" y="78">Active</text><text class="il-text" x="358" y="104" style="font-size:20px">6</text></g>
+
+  <g class="a-row" style="--i:0"><rect class="il-card2" x="28" y="136" width="300" height="40" rx="10"/><circle class="il-ink" cx="52" cy="156" r="12"/><path d="M48 150l11 6-11 6z" fill="var(--on-primary)"/><text class="il-text" x="74" y="152">StreamBox</text><text class="il-text-s" x="74" y="166">Streaming · renews 12 Nov</text><text class="il-text" x="268" y="161">$15.49</text></g>
+  <g class="a-row" style="--i:1"><rect class="il-card2" x="28" y="184" width="300" height="40" rx="10"/><circle class="il-ok" cx="52" cy="204" r="12"/><path d="M56 197v13M56 197l-6 2v10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="49" cy="210" r="2.4" fill="#fff"/><text class="il-text" x="74" y="200">TuneLy</text><text class="il-text-s" x="74" y="214">Music · renews 03 Dec</text><text class="il-text" x="274" y="209">$9.99</text></g>
+  <g class="a-row" style="--i:2"><rect class="il-card2" x="28" y="232" width="300" height="40" rx="10"/><circle class="il-warn" cx="52" cy="252" r="12"/><path d="M46 255a5 5 0 0 1 1-9 6 6 0 0 1 11 2 4 4 0 0 1 0 7z" fill="#fff"/><text class="il-text" x="74" y="248">CloudNest</text><text class="il-text-s" x="74" y="262">Storage · renews 21 Nov</text><text class="il-text" x="278" y="257">$4.99</text></g>
+
+  <text class="il-text-s" x="344" y="142">Spend by month</text>
+  <rect class="il-line" x="344" y="276" width="148" height="2" rx="1"/>
+  <rect class="il-ink a-bar" style="--i:0" x="352" y="236" width="20" height="40" rx="5"/>
+  <rect class="il-ink a-bar" style="--i:1" x="380" y="206" width="20" height="70" rx="5"/>
+  <rect class="il-ink a-bar" style="--i:2" x="408" y="221" width="20" height="55" rx="5"/>
+  <rect class="il-ink a-bar" style="--i:3" x="436" y="181" width="20" height="95" rx="5"/>
+  <rect class="il-ok a-bar" style="--i:4" x="464" y="196" width="20" height="80" rx="5"/>
+
+  <g class="a-float"><rect class="il-ink" x="32" y="288" width="140" height="30" rx="15"/><circle cx="50" cy="303" r="5" fill="var(--on-primary)"/><text class="il-on-ink" x="62" y="307">Renews in 3 days</text></g>
+</svg></figure>
+      </div>
+
+      <div class="lp-show-row reverse lp-reveal" data-reveal="right">
+        <div class="lp-show-copy">
+          <span class="lp-eyebrow">Reminders</span>
+          <h3>Never be surprised by a renewal.</h3>
+          <p>An email arrives days before a subscription renews, so you can cancel, pause or just keep it, on purpose.</p>
+          <ul><li>Email 3 days before each renewal</li><li>Autopay dates roll forward on their own</li><li>One reminder per renewal, no spam</li></ul>
+        </div>
+        <figure class="lp-show-art"><svg viewBox="0 0 520 340" role="img" aria-label="A calendar with a highlighted renewal date and an email reminder arriving">
+  <rect class="il-card" x="20" y="24" width="250" height="290" rx="16"/>
+  <rect class="il-ink" x="20" y="24" width="250" height="54" rx="16"/><rect class="il-ink" x="20" y="56" width="250" height="22" />
+  <text class="il-on-ink" x="40" y="57" style="font-size:14px;letter-spacing:.12em">NOVEMBER</text>
+  <rect class="il-ink" x="70" y="14" width="8" height="22" rx="4"/><rect class="il-ink" x="212" y="14" width="8" height="22" rx="4"/>
+  <rect class="il-card2" x="36" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="68" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="100" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="132" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="164" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="196" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="228" y="104" width="24" height="24" rx="7"/><rect class="il-card2" x="36" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="68" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="100" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="132" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="164" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="196" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="228" y="140" width="24" height="24" rx="7"/><rect class="il-card2" x="36" y="176" width="24" height="24" rx="7"/><rect class="il-card2" x="68" y="176" width="24" height="24" rx="7"/><rect class="il-card2" x="100" y="176" width="24" height="24" rx="7"/><rect class="il-ink" x="132" y="176" width="24" height="24" rx="7"/><text class="il-on-ink" x="144" y="192" text-anchor="middle">18</text><rect class="il-card2" x="164" y="176" width="24" height="24" rx="7"/><rect class="il-card2" x="196" y="176" width="24" height="24" rx="7"/><rect class="il-card2" x="228" y="176" width="24" height="24" rx="7"/><rect class="il-card2" x="36" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="68" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="100" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="132" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="164" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="196" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="228" y="212" width="24" height="24" rx="7"/><rect class="il-card2" x="36" y="248" width="24" height="24" rx="7"/><rect class="il-card2" x="68" y="248" width="24" height="24" rx="7"/><rect class="il-card2" x="100" y="248" width="24" height="24" rx="7"/><circle class="a-pulse" cx="144" cy="188" r="14" fill="none" stroke="var(--primary)" stroke-width="2"/>
+  <g transform="translate(398 78)"><g class="a-bell"><path class="il-ink" d="M0 -26C-18 -26 -26 -10 -26 8V22L-34 32H34L26 22V8C26 -10 18 -26 0 -26Z"/><circle class="il-ink" cx="0" cy="-30" r="4"/><circle class="il-ink" cx="0" cy="42" r="7"/></g><g class="a-pop" style="--i:2"><circle class="il-bad" cx="22" cy="-20" r="9"/><text class="il-on-ink" x="22" y="-16" text-anchor="middle" style="font-size:11px">1</text></g></g>
+  <g class="a-slide" style="--i:1"><rect class="il-card" x="300" y="150" width="204" height="104" rx="14"/><circle class="il-ink" cx="330" cy="182" r="14"/><path d="M322 177h16v11h-16zM322 177l8 6 8-6" fill="none" stroke="var(--on-primary)" stroke-width="1.8" stroke-linejoin="round"/><text class="il-text" x="354" y="180">Renewal reminder</text><text class="il-text-s" x="354" y="196">StreamBox · in 3 days</text><rect class="il-line" x="316" y="214" width="170" height="2" rx="1"/><text class="il-text" x="316" y="238">$15.49</text><text class="il-text-s" x="372" y="238">charged on 12 Nov</text></g>
+  <g class="a-pop a-float" style="--i:3"><rect class="il-ok" x="352" y="276" width="124" height="30" rx="15"/><path d="M368 291l5 5 9-10" class="il-stroke" style="stroke:#fff;stroke-width:2.4"/><text class="il-on-ink" x="390" y="295" style="fill:#fff">Email sent</text></g>
+</svg></figure>
+      </div>
+
+      <div class="lp-show-row lp-reveal" data-reveal="left">
+        <div class="lp-show-copy">
+          <span class="lp-eyebrow">Bank messages</span>
+          <h3>Paste an SMS. Skip the typing.</h3>
+          <p>Drop in a bank alert and the name, amount, billing cycle and renewal date are filled in. You review, then save.</p>
+          <ul><li>Understands common bank formats</li><li>Detects autopay automatically</li><li>You approve everything before it is saved</li></ul>
+        </div>
+        <figure class="lp-show-art"><svg viewBox="0 0 520 340" role="img" aria-label="A bank SMS being turned into a subscription entry">
+  <rect class="il-card" x="20" y="10" width="170" height="320" rx="26"/>
+  <rect class="il-line" x="85" y="22" width="40" height="6" rx="3"/>
+  <g class="a-slide" style="--i:0"><rect class="il-card2" x="34" y="52" width="142" height="116" rx="14"/><text class="il-text-s" x="46" y="72" style="font-weight:700">BANK ALERT</text><text class="il-text" x="46" y="94" style="font-size:12px">$15.49 debited</text><text class="il-text-s" x="46" y="112">Auto-debit: StreamBox</text><text class="il-text-s" x="46" y="128">Monthly plan activated</text><text class="il-text-s" x="46" y="144">Next charge 12 Nov</text></g>
+  <rect class="il-card2" x="34" y="180" width="110" height="34" rx="12"/><rect class="il-line-s" x="46" y="192" width="70" height="5" rx="2.5"/><rect class="il-line-s" x="46" y="202" width="46" height="5" rx="2.5"/>
+  <rect class="il-card2" x="34" y="226" width="124" height="34" rx="12"/><rect class="il-line-s" x="46" y="238" width="86" height="5" rx="2.5"/><rect class="il-line-s" x="46" y="248" width="52" height="5" rx="2.5"/>
+  <g class="a-nudge"><path class="il-stroke" d="M206 170h62M254 156l14 14-14 14"/></g>
+  <g class="a-slide" style="--i:2"><rect class="il-card" x="290" y="46" width="216" height="248" rx="16"/><text class="il-text" x="308" y="76" style="font-size:14px">Review &amp; save</text>
+    <rect class="il-line" x="308" y="88" width="180" height="1.5"/>
+    <text class="il-text-s" x="308" y="112">Name</text><text class="il-text" x="388" y="112">StreamBox</text>
+    <text class="il-text-s" x="308" y="140">Price</text><text class="il-text" x="388" y="140">$15.49</text>
+    <text class="il-text-s" x="308" y="168">Billing</text><text class="il-text" x="388" y="168">Monthly</text>
+    <text class="il-text-s" x="308" y="196">Renews</text><text class="il-text" x="388" y="196">12 Nov</text>
+    <text class="il-text-s" x="308" y="224">Autopay</text><g class="a-pop" style="--i:3"><circle class="il-ok" cx="396" cy="220" r="9"/><path d="M391 220l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <rect class="il-ink" x="308" y="246" width="96" height="32" rx="10"/><text class="il-on-ink" x="356" y="266" text-anchor="middle">Save</text></g>
+</svg></figure>
+      </div>
+    </section>
+
+    <!-- ------------------------------ Features ------------------------------ -->
+    <section class="lp-section" id="features">
+      <div class="lp-section-head lp-reveal">
+        <span class="lp-eyebrow">Features</span>
+        <h2>Everything you need. Nothing you don't.</h2>
+        <p>A small, focused toolkit for keeping recurring costs under control.</p>
+      </div>
+
+      <div class="lp-grid lp-grid-3">
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="layout-dashboard"></i></span>
+          <h3>Clear spending overview</h3>
+          <p>Monthly and yearly totals, active count, and a category breakdown at a glance.</p>
+        </article>
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="bell-ring"></i></span>
+          <h3>Renewal reminders</h3>
+          <p>An email lands in your inbox days before a subscription renews or ends.</p>
+        </article>
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="scan-line"></i></span>
+          <h3>Add from a bank message</h3>
+          <p>Paste an SMS or alert and the name, amount, date and autopay are filled in for you.</p>
+        </article>
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="repeat"></i></span>
+          <h3>Autopay aware</h3>
+          <p>Turn autopay on and the renewal date rolls forward on its own when a charge is due.</p>
+        </article>
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="search"></i></span>
+          <h3>Search and filter</h3>
+          <p>Find anything fast by name, category or status: active, paused or cancelled.</p>
+        </article>
+        <article class="lp-card lp-reveal">
+          <span class="lp-icon"><i data-lucide="lock"></i></span>
+          <h3>Private by design</h3>
+          <p>Passwords are salted and hashed, and your data never leaves this browser.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------------------------------ How it works ------------------------------ -->
+    <section class="lp-section lp-alt" id="how">
+      <div class="lp-section-head lp-reveal">
+        <span class="lp-eyebrow">How it works</span>
+        <h2>Three steps, then it runs itself.</h2>
+      </div>
+      <ol class="lp-steps">
+        <li class="lp-reveal"><span class="lp-step-num">1</span><h3>Create your account</h3><p>Sign up and confirm your email with a one-time code.</p></li>
+        <li class="lp-reveal"><span class="lp-step-num">2</span><h3>Add your subscriptions</h3><p>Type them in, or paste a bank message and just review.</p></li>
+        <li class="lp-reveal"><span class="lp-step-num">3</span><h3>Stay ahead of renewals</h3><p>Watch your spend and get reminded before each charge.</p></li>
+      </ol>
+    </section>
+
+    <!-- ------------------------------ Reviews ------------------------------ -->
+    <section class="lp-section" id="reviews">
+      <div class="lp-section-head lp-reveal">
+        <span class="lp-eyebrow">Reviews</span>
+        <h2>Loved by people who hate surprise charges.</h2>
+        <div class="lp-rating-summary" id="ratingSummary" aria-live="polite"></div>
+      </div>
+
+      <div class="lp-grid lp-grid-3" id="reviewGrid"></div>
+      <div class="lp-center">
+        <button type="button" class="lp-btn lp-btn-ghost hidden" id="moreReviewsBtn">Show more reviews</button>
+      </div>
+
+      <div class="lp-review-form-wrap lp-reveal">
+        <h3>Share your experience</h3>
+        <p class="lp-muted">Used the app? Leave a quick review.</p>
+        <form id="reviewForm" class="lp-review-form" novalidate>
+          <div class="lp-field">
+            <label for="reviewName">Name</label>
+            <input type="text" id="reviewName" maxlength="40" placeholder="Your name" required />
+          </div>
+          <div class="lp-field">
+            <label id="reviewStarsLabel">Rating</label>
+            <div class="lp-star-input" id="starInput" role="radiogroup" aria-labelledby="reviewStarsLabel"></div>
+          </div>
+          <div class="lp-field lp-field-full">
+            <label for="reviewText">Review</label>
+            <textarea id="reviewText" rows="3" maxlength="300" placeholder="What did you like?" required></textarea>
+          </div>
+          <p id="reviewError" class="lp-error hidden"></p>
+          <button type="submit" class="lp-btn lp-btn-solid">Submit review</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ------------------------------ FAQ ------------------------------ -->
+    <section class="lp-section lp-alt" id="faq">
+      <div class="lp-section-head lp-reveal">
+        <span class="lp-eyebrow">FAQ</span>
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="lp-faq lp-reveal" id="faqList">
+        <details>
+          <summary>Is it really free?</summary>
+          <p>Yes. There are no plans or paywalls, and no card is needed to sign up.</p>
+        </details>
+        <details>
+          <summary>Where is my data stored?</summary>
+          <p>In your own browser's local storage, separately for each account. Nothing is uploaded to a server, so clearing your browser data also clears your subscriptions.</p>
+        </details>
+        <details>
+          <summary>Will I see my data on another device?</summary>
+          <p>Not yet. Accounts and subscriptions live in the browser where you created them, so another device or browser starts empty.</p>
+        </details>
+        <details>
+          <summary>How do the reminder emails work?</summary>
+          <p>While the app is open, it checks for subscriptions renewing within 3 days and emails you once per renewal date. Reminders can't be sent while the tab is closed, because there is no server running in the background.</p>
+        </details>
+        <details>
+          <summary>What does "Add via bank message" do?</summary>
+          <p>Paste a bank SMS or alert and the app extracts the merchant, amount, billing cycle, renewal date and autopay status. You review everything before saving, since parsing is best-effort.</p>
+        </details>
+        <details>
+          <summary>What does autopay do here?</summary>
+          <p>It doesn't charge anything. It only marks a subscription as auto-billed, so its renewal date rolls forward automatically once the date passes.</p>
+        </details>
+        <details>
+          <summary>Why do I get a verification code?</summary>
+          <p>It proves the email address is yours. You'll be asked for a code at sign-up, and again when you log in from a browser that hasn't been verified yet.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ------------------------------ Final CTA ------------------------------ -->
+    <section class="lp-cta lp-reveal">
+      <h2>Take control of your subscriptions today.</h2>
+      <p>Set up in a minute. Free, private, and easy on the eyes.</p>
+      <button type="button" class="lp-btn lp-btn-solid lp-btn-lg" data-open-auth="signup">Get started free</button>
+    </section>
+
+    <!-- ------------------------------ Footer ------------------------------ -->
+    <footer class="lp-footer">
+      <div class="lp-brand"><span class="brand-logo" role="img" aria-label="SUBTRACK"></span></div>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <p class="lp-muted">© <span id="lpYear"></span> SUBTRACK. Your data stays in your browser.</p>
+    </footer>
+
+    <button type="button" id="backToTop" class="lp-top hidden" aria-label="Back to top" title="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+  <!-- /#publicSite -->
+
+  <!-- ============================= APP ROOT ============================= -->
+  <div id="appRoot" class="app hidden">
+
+    <!-- ============================= TOPBAR ============================= -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-logo" role="img" aria-label="SUBTRACK"></span>
+      </div>
+
+      <div class="topbar-actions">
+        <span id="currentUserLabel" class="current-user-label"></span>
+
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></svg>
+        </button>
+
+        <button id="logoutBtn" class="icon-btn" type="button" aria-label="Log out" title="Log out">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
+        </button>
+
+        <button id="importMsgBtn" class="btn btn-ghost">
+          <i data-lucide="scan-line"></i>
+          <span>Add via bank message</span>
+        </button>
+        <button id="addSubBtn" class="btn btn-primary">
+          <i data-lucide="plus"></i>
+          <span>Add subscription</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- ========================= SUMMARY CARDS ========================= -->
+      <section class="summary-grid" aria-label="Spending summary">
+        <div class="card summary-card">
+          <div class="summary-card-top">
+            <span class="summary-label">Monthly spend</span>
+            <i data-lucide="calendar-days" class="summary-icon"></i>
+          </div>
+          <div class="summary-value" id="sumMonthly">$0.00</div>
+          <div class="summary-sub">across active subscriptions</div>
+        </div>
+
+        <div class="card summary-card">
+          <div class="summary-card-top">
+            <span class="summary-label">Yearly spend</span>
+            <i data-lucide="calendar-range" class="summary-icon"></i>
+          </div>
+          <div class="summary-value" id="sumYearly">$0.00</div>
+          <div class="summary-sub">projected over 12 months</div>
+        </div>
+
+        <div class="card summary-card">
+          <div class="summary-card-top">
+            <span class="summary-label">Active subscriptions</span>
+            <i data-lucide="check-circle-2" class="summary-icon"></i>
+          </div>
+          <div class="summary-value" id="sumActive">0</div>
+          <div class="summary-sub">currently billing</div>
+        </div>
+
+        <div class="card summary-card summary-card-accent">
+          <div class="summary-card-top">
+            <span class="summary-label">Renewing soon</span>
+            <i data-lucide="bell-ring" class="summary-icon"></i>
+          </div>
+          <div class="summary-value" id="sumUpcoming">0</div>
+          <div class="summary-sub">in the next 7 days</div>
+        </div>
+      </section>
+
+      <!-- ============================ CONTENT ============================ -->
+      <div class="content-grid">
+
+        <section class="card panel" aria-label="All subscriptions">
+          <div class="panel-header">
+            <h2>All subscriptions</h2>
+
+            <div class="filters">
+              <div class="search-input">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Search by name…" autocomplete="off" />
+              </div>
+              <select id="categoryFilter">
+                <option value="">All categories</option>
+              </select>
+              <select id="statusFilter">
+                <option value="">All statuses</option>
+                <option value="active">Active</option>
+                <option value="paused">Paused</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="sub-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Cost</th>
+                  <th>Cycle</th>
+                  <th>Renews</th>
+                  <th>Autopay</th>
+                  <th>Status</th>
+                  <th class="col-actions"></th>
+                </tr>
+              </thead>
+              <tbody id="subTableBody">
+                <!-- rows injected by file.js -->
+              </tbody>
+            </table>
+
+            <div id="emptyState" class="empty-state hidden">
+              <i data-lucide="inbox"></i>
+              <p>No subscriptions match your filters.</p>
+              <button class="btn btn-ghost" id="clearFiltersBtn">Clear filters</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="card panel">
+            <div class="panel-header panel-header-tight">
+              <h2>Spend by category</h2>
+            </div>
+            <div id="categoryChart" class="category-chart"></div>
+          </section>
+
+          <section class="card panel">
+            <div class="panel-header panel-header-tight">
+              <h2>Upcoming renewals</h2>
+            </div>
+            <ul id="upcomingList" class="upcoming-list"></ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <!-- /#appRoot -->
+
+  <!-- ==================== IMPORT FROM BANK MESSAGE ==================== -->
+  <div id="importModalOverlay" class="modal-overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="importModalTitle">
+      <div class="modal-header">
+        <h2 id="importModalTitle">Add via bank message</h2>
+        <button class="icon-btn" id="closeImportModalBtn" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-form">
+        <p class="import-hint">
+          Paste the bank SMS or notification text that says autopay or a subscription
+          was started/renewed — the app will pull out the name, amount, renewal date,
+          and autopay status, then let you review before saving.
+        </p>
+
+        <div class="form-row">
+          <label for="importMsgText">Bank message</label>
+          <textarea id="importMsgText" rows="5" placeholder="Paste your bank SMS or notification text here…"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="importExampleSelect">Or try a sample message <span class="label-optional">(different banks/formats, for testing)</span></label>
+          <select id="importExampleSelect">
+            <option value="">— Pick an example —</option>
+            <option value="netflix">Debit + Auto Debit tag — Netflix</option>
+            <option value="hotstar">UPI Autopay — Hotstar</option>
+            <option value="amazon">Subscription activated — Amazon Prime</option>
+            <option value="spotify">E-mandate registered — Spotify</option>
+            <option value="ms365">Yearly plan — Microsoft 365</option>
+            <option value="linkedin">Card charge, no autopay wording — LinkedIn Premium</option>
+          </select>
+        </div>
+
+        <p id="importError" class="auth-error hidden"></p>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" id="clearImportBtn">Clear</button>
+          <div class="modal-footer-right">
+            <button type="button" class="btn btn-ghost" id="cancelImportBtn">Cancel</button>
+            <button type="button" class="btn btn-primary" id="parseImportBtn">Parse &amp; review</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================= MODAL ============================= -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add subscription</h2>
+        <button class="icon-btn" id="closeModalBtn" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <form id="subForm" class="modal-form" novalidate>
+        <input type="hidden" id="subId" />
+
+        <div class="form-row">
+          <label for="subName">Name</label>
+          <input type="text" id="subName" placeholder="e.g. Netflix" required />
+        </div>
+
+        <div class="form-row logo-row">
+          <span id="logoPreview" class="logo-preview" aria-hidden="true"></span>
+          <div class="logo-fields">
+            <label for="subDomain">Website <span class="label-optional">(optional, used for the app logo)</span></label>
+            <input type="text" id="subDomain" placeholder="e.g. netflix.com" autocomplete="off" />
+            <span id="logoHint" class="logo-hint"></span>
+          </div>
+        </div>
+
+        <div class="form-row form-row-split">
+          <div>
+            <label for="subPrice">Price</label>
+            <input type="number" id="subPrice" placeholder="0.00" min="0" step="0.01" required />
+          </div>
+          <div>
+            <label for="subCycle">Billing frequency</label>
+            <select id="subCycle" required>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row form-row-split">
+          <div>
+            <label for="subRenewal">Renewal date</label>
+            <input type="date" id="subRenewal" required />
+          </div>
+          <div>
+            <label for="subStatus">Status</label>
+            <select id="subStatus">
+              <option value="active">Active</option>
+              <option value="paused">Paused</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-row" for="subAutopay">
+            <input type="checkbox" id="subAutopay" />
+            <span>Autopay enabled</span>
+            <span class="label-optional">— renewal date rolls forward automatically when it's due</span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="subCategory">Category</label>
+          <input type="text" id="subCategory" list="categoryOptions" placeholder="e.g. Streaming" required />
+          <datalist id="categoryOptions">
+            <option value="Streaming"></option>
+            <option value="Software"></option>
+            <option value="Utilities"></option>
+            <option value="Health"></option>
+            <option value="Finance"></option>
+            <option value="Education"></option>
+            <option value="Other"></option>
+          </datalist>
+        </div>
+
+        <div class="form-row">
+          <label for="subNotes">Notes <span class="label-optional">(optional)</span></label>
+          <textarea id="subNotes" rows="2" placeholder="Any extra detail worth remembering…"></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="deleteSubBtn" class="btn btn-danger-ghost hidden">
+            <i data-lucide="trash-2"></i> Delete
+          </button>
+          <div class="modal-footer-right">
+            <button type="button" class="btn btn-ghost" id="cancelModalBtn">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveSubBtn">Save subscription</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================= TOASTS ============================= -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="file.js"></script>
+</body>
+</html>
